@@ -7,8 +7,9 @@ exports.handler = async (event) => {
     //assign webhook data to variable
     let webhookData = JSON.parse(event.body);
     
-    //get endpoint url and x-api header from header
+    //get endpoint url from advanced webhook 'endurl' property
     let url = event.headers.endurl;
+    //exammple additional header passed with advanced webhook
     let myHeader = event.headers["x-api"];
 
          
